@@ -1,6 +1,6 @@
 Hospital A&E Triage & Scheduling Simulator
 
-A console-based simulation system built for my AQA A-Level Computer Science NEA (2026), modelling how a hospital A&E department could triage patients, match them to suitable doctors, and schedule appointments in real time — while also acting as a stress-testing tool for hospital staffing decisions.
+A console-based simulation system modelling how a hospital A&E department could triage patients, match them to suitable doctors, and schedule appointments in real time — while also acting as a stress-testing tool for hospital staffing decisions.
 
 The Problem
 
