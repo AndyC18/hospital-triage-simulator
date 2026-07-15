@@ -121,6 +121,8 @@ namespace RealNEABackUp.Services
                 score += 10;
             }
 
+            score += 5 * matchingSymptoms; //add 5 points for each matching symptom
+
             return Math.Max(0, Math.Min(score, 100)); //score between 0-100
         }
         
