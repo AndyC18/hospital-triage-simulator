@@ -8,7 +8,7 @@ public class HospitalsContext : DbContext
     //defines the relationships in the database
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=hospitals.db"); //creates SQLite database file
+        optionsBuilder.UseSqlite("Data Source=hospitalsdatabase.db"); //creates SQLite database file
     }
 
 

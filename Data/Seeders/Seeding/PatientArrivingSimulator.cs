@@ -22,13 +22,6 @@ public class PatientSimulator
         
     }
     Random random = new Random();
-    private String[] FirstNames =
-    { "Chaya" , "Abdiel", "Jesus", "Virginia", "Nathaniel", "Heidi", "Camron",
-    "Fernanda", "Gaven", "Jakob", "Abel", "Finley", "Easton", "Seth", "Spencer", "Cara", "Baron", "Jabari", "Theresa" };
-
-    private String[] LastNames =
-    { "Romeo", "Electra","Royce","McCain","Bayard","Sterling","Jenkins","Hennessey","Holland","Lockhart"};
-
     Timer arrivalTimer;
     
     public void startSimulation()
@@ -51,12 +44,10 @@ public class PatientSimulator
     {
         lock(_lock)
         {
-            int randomIndexForFirstName = random.Next(0, FirstNames.Length);
-            int randomIndexForLastName = random.Next(0, LastNames.Length);
-            int randomNumberOfSymptoms = random.Next(1, 3);
+            int randomNumberOfSymptoms = HelperClass.weightedRandomSymptomCount();
 
-            string firstName = FirstNames[randomIndexForFirstName];
-            string lastName = LastNames[randomIndexForLastName];
+            string firstName = HelperClass.randomName().Split(' ')[0];
+            string lastName = HelperClass.randomName().Split(' ')[1];
 
             int age = random.Next(1, 85);
             DateTime DoB = DateTime.Now.AddYears(-age);

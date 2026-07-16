@@ -27,6 +27,26 @@ public static class TriageDbInitialiser
                 symptoms.Add(new SymptomClass { SymptomName = "Dizziness", severityScore = 4 });
                 symptoms.Add(new SymptomClass { SymptomName = "Nausea", severityScore = 4 }); 
                 symptoms.Add(new SymptomClass { SymptomName = "Vomiting", severityScore = 15}); 
+
+                //extra symptoms for simulation but not in triage tree
+                symptoms.Add(new SymptomClass { SymptomName = "Cough", severityScore = 5 });
+                symptoms.Add(new SymptomClass { SymptomName = "Sore Throat", severityScore = 3 });
+                symptoms.Add(new SymptomClass { SymptomName = "Shortness of Breath", severityScore = 40 });
+                symptoms.Add(new SymptomClass { SymptomName = "Back Pain", severityScore = 12 });
+                symptoms.Add(new SymptomClass { SymptomName = "Rash", severityScore = 8 });
+                symptoms.Add(new SymptomClass { SymptomName = "Fatigue", severityScore = 6 });
+                symptoms.Add(new SymptomClass { SymptomName = "Diarrhoea", severityScore = 10 });
+                symptoms.Add(new SymptomClass { SymptomName = "Joint Pain", severityScore = 9 });
+                symptoms.Add(new SymptomClass { SymptomName = "Blurred Vision", severityScore = 20 });
+                symptoms.Add(new SymptomClass { SymptomName = "Confusion", severityScore = 45 });
+                symptoms.Add(new SymptomClass { SymptomName = "Swelling", severityScore = 15 });
+                symptoms.Add(new SymptomClass { SymptomName = "Difficulty Speaking", severityScore = 50 });
+                symptoms.Add(new SymptomClass { SymptomName = "Numbness", severityScore = 25 });
+                symptoms.Add(new SymptomClass { SymptomName = "Ear Pain", severityScore = 5 });
+                symptoms.Add(new SymptomClass { SymptomName = "Toothache", severityScore = 4 });
+                symptoms.Add(new SymptomClass { SymptomName = "Muscle Cramps", severityScore = 5 });
+                symptoms.Add(new SymptomClass { SymptomName = "Palpitations", severityScore = 30 });
+                symptoms.Add(new SymptomClass { SymptomName = "Anxiety", severityScore = 7 });
             }
             DBcontext.Symptoms.AddRange(symptoms);
             DBcontext.SaveChanges();
@@ -163,9 +183,6 @@ public static class TriageDbInitialiser
                 Answer = "N"
             }
         };
-
-
-
 
         q5.SymptomAnswers = new List<SymptomAnswer>
                 {

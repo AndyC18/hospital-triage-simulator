@@ -18,7 +18,8 @@ namespace RealNEABackUp.Services
         Dictionary<DoctorClass, DateTime> availableDoctorTimes;
         PatientDoctorCompatibility Compatibility;
         DateTime startTime;  
-        DateTime endTime = DateTime.Today.AddHours(23); //23
+        DateTime endTime = DateTime.MaxValue; //23
+        //DateTime endTime = DateTime.Today.AddHours(24);
         public AppointmentGenerator(HospitalsContext context, PriorityQueue patientQueue, PatientDoctorCompatibility compatibilities)
         {
             DbContext = context;

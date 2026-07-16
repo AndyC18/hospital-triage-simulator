@@ -7,6 +7,7 @@ namespace RealNEA
 {
     public static class HelperClass
     {
+        static Random random = new Random();
         public static int CalculateDuration(PatientClass patient) //usually would be longer, but shorter to display algorithms
         {
             int baseTime = 3; 
@@ -74,6 +75,19 @@ namespace RealNEA
             return randomName;
             
         }
+    public static int weightedRandomSymptomCount( )
+    {
+        int roll = random.Next(0, 100); // 0-99
+
+        if (roll < 50)       // 50% chance: 1-4 symptoms
+            return random.Next(1, 5);
+        else if (roll < 90)  // 40% chance: 5-7 symptoms
+            return random.Next(5, 8);
+        else if (roll < 99)  // 9% chance: 8-9 symptoms
+            return random.Next(8, 10);
+        else                 // 1% chance: exactly 10
+            return 100;
+    }
     }
 
 
